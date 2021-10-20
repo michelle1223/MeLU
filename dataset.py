@@ -28,7 +28,3 @@ class movielens_1m(object):
         score_data['time'] = score_data["timestamp"].map(lambda x: datetime.datetime.fromtimestamp(x))
         score_data = score_data.drop(["timestamp"], axis=1)
         return profile_data, item_data, score_data
-
-class coat(object):
-    def __init__(self):
-        self.user_data, self.item_data, self.score_data = self.load()
